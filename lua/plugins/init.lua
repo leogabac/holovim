@@ -7,13 +7,16 @@ local ok, err = pcall(vim.pack.add, {
   { src = "https://github.com/echasnovski/mini.icons" },
   { src = "https://github.com/echasnovski/mini.pairs" },
   { src = "https://github.com/echasnovski/mini.surround" },
+  { src = "https://github.com/L3MON4D3/LuaSnip" },
   { src = "https://github.com/nvim-tree/nvim-tree.lua" },
   { src = "https://github.com/nvim-tree/nvim-web-devicons" },
   { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
   { src = "https://github.com/neovim/nvim-lspconfig" },
   { src = "https://github.com/Saghen/blink.cmp" },
+  { src = "https://github.com/rafamadriz/friendly-snippets" },
   { src = "https://github.com/stevearc/conform.nvim" },
   { src = "https://github.com/tpope/vim-sleuth" },
+  { src = "https://github.com/lervag/vimtex" },
 }, { confirm = false, load = true })
 
 if not ok then
@@ -25,6 +28,7 @@ end
 require("plugins.colorscheme")
 require("plugins.ui")
 require("plugins.editing")
+require("plugins.latex")
 require("plugins.files")
 require("plugins.treesitter")
 require("plugins.lsp")
