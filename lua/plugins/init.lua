@@ -13,6 +13,8 @@ local ok, err = pcall(vim.pack.add, {
   { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
   { src = "https://github.com/neovim/nvim-lspconfig" },
   { src = "https://github.com/Saghen/blink.cmp" },
+  { src = "https://github.com/Saghen/blink.compat" },
+  { src = "https://github.com/micangl/cmp-vimtex" },
   { src = "https://github.com/rafamadriz/friendly-snippets" },
   { src = "https://github.com/stevearc/conform.nvim" },
   { src = "https://github.com/tpope/vim-sleuth" },

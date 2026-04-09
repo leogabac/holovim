@@ -3,6 +3,11 @@ if not ok then
   return
 end
 
+local ok_compat, blink_compat = pcall(require, "blink.compat")
+if ok_compat then
+  blink_compat.setup({})
+end
+
 blink.setup({
   keymap = {
     preset = "default",
@@ -23,6 +28,15 @@ blink.setup({
   },
   sources = {
     default = { "lsp", "path", "snippets", "buffer" },
+    per_filetype = {
+      tex = { "lsp", "path", "snippets", "buffer", "vimtex" },
+    },
+    providers = {
+      vimtex = {
+        name = "vimtex",
+        module = "blink.compat.source",
+      },
+    },
   },
   fuzzy = {
     implementation = "lua",
