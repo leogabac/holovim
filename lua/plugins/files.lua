@@ -97,6 +97,11 @@ mini_pick.setup({
   },
 })
 
+local ok_extra, mini_extra = pcall(require, "mini.extra")
+if ok_extra then
+  mini_extra.setup()
+end
+
 vim.keymap.set("n", "<leader>sf", function()
   mini_pick.builtin.files()
 end, { desc = "Search files", noremap = true, silent = true })
