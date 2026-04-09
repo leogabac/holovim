@@ -155,8 +155,36 @@ vim.lsp.config("ruff", {
   capabilities = capabilities,
 })
 
+vim.lsp.config("ltex", {
+  capabilities = capabilities,
+  filetypes = { "bib", "gitcommit", "markdown", "plaintex", "tex", "text" },
+  root_dir = function(bufnr, on_dir)
+    local name = vim.api.nvim_buf_get_name(bufnr)
+    local root = vim.fs.root(name, { ".git" }) or vim.fs.dirname(name) or vim.uv.cwd()
+    if root then
+      on_dir(root)
+    end
+  end,
+  settings = {
+    ltex = {
+      enabled = { "bibtex", "git-commit", "latex", "markdown", "plaintext", "tex" },
+      language = "en-US",
+      checkFrequency = "save",
+      sentenceCacheSize = 2000,
+      additionalRules = {
+        enablePickyRules = true,
+        motherTongue = "en-US",
+      },
+      dictionary = {
+        ["en-US"] = { "Ising" },
+      },
+    },
+  },
+})
+
 vim.lsp.enable({
   "lua_ls",
   "pylsp",
   "ruff",
+  "ltex",
 })

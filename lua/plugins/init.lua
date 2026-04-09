@@ -8,6 +8,9 @@ local ok, err = pcall(vim.pack.add, {
   { src = "https://github.com/echasnovski/mini.pairs" },
   { src = "https://github.com/echasnovski/mini.surround" },
   { src = "https://github.com/L3MON4D3/LuaSnip" },
+  { src = "https://github.com/bullets-vim/bullets.vim" },
+  { src = "https://github.com/christoomey/vim-tmux-navigator" },
+  { src = "https://github.com/lewis6991/gitsigns.nvim" },
   { src = "https://github.com/nvim-tree/nvim-tree.lua" },
   { src = "https://github.com/nvim-tree/nvim-web-devicons" },
   { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
@@ -31,6 +34,7 @@ require("plugins.colorscheme")
 require("plugins.ui")
 require("plugins.editing")
 require("plugins.latex")
+require("plugins.utilities")
 require("plugins.files")
 require("plugins.treesitter")
 require("plugins.lsp")
