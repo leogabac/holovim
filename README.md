@@ -5,4 +5,4 @@ A neovim configuration for proud, wise, wolves.
 
 - Neovim 0.12 or newer
 - `python-lsp-server`
-- `ruff`
+- `ruff` for Python linting and formatting

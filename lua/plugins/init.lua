@@ -12,6 +12,7 @@ local ok, err = pcall(vim.pack.add, {
   { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
   { src = "https://github.com/neovim/nvim-lspconfig" },
   { src = "https://github.com/Saghen/blink.cmp" },
+  { src = "https://github.com/stevearc/conform.nvim" },
   { src = "https://github.com/tpope/vim-sleuth" },
 }, { confirm = false, load = true })
 
@@ -28,3 +29,4 @@ require("plugins.files")
 require("plugins.treesitter")
 require("plugins.lsp")
 require("plugins.completion")
+require("plugins.formatting")
