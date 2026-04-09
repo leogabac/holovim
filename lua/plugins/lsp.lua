@@ -8,6 +8,15 @@ vim.diagnostic.config({
   },
 })
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+do
+  local ok_blink, blink = pcall(require, "blink.cmp")
+  if ok_blink then
+    capabilities = blink.get_lsp_capabilities(capabilities)
+  end
+end
+
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("holovim_lsp_attach", { clear = true }),
   callback = function(event)
@@ -92,6 +101,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 vim.lsp.config("lua_ls", {
+  capabilities = capabilities,
   settings = {
     Lua = {
       completion = {
@@ -115,6 +125,7 @@ vim.lsp.config("lua_ls", {
 })
 
 vim.lsp.config("pylsp", {
+  capabilities = capabilities,
   settings = {
     pylsp = {
       plugins = {
@@ -138,6 +149,10 @@ vim.lsp.config("pylsp", {
       },
     },
   },
+})
+
+vim.lsp.config("ruff", {
+  capabilities = capabilities,
 })
 
 vim.lsp.enable({

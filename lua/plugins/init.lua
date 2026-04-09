@@ -9,6 +9,7 @@ local ok, err = pcall(vim.pack.add, {
   { src = "https://github.com/nvim-tree/nvim-web-devicons" },
   { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
   { src = "https://github.com/neovim/nvim-lspconfig" },
+  { src = "https://github.com/Saghen/blink.cmp" },
 }, { confirm = false, load = true })
 
 if not ok then
@@ -22,3 +23,4 @@ require("plugins.ui")
 require("plugins.files")
 require("plugins.treesitter")
 require("plugins.lsp")
+require("plugins.completion")
