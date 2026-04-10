@@ -26,6 +26,18 @@ blink.setup({
       auto_show = false,
     },
   },
+  signature = {
+    enabled = true,
+    trigger = {
+      enabled = true,
+      show_on_trigger_character = true,
+      show_on_insert = false,
+      show_on_insert_on_trigger_character = true,
+    },
+    window = {
+      show_documentation = false,
+    },
+  },
   sources = {
     default = { "lsp", "path", "snippets", "buffer" },
     per_filetype = {
