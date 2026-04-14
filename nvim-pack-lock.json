@@ -12,8 +12,12 @@
       "rev": "1454f14a8d855a578ceeba77c62538fa1459a67c",
       "src": "https://github.com/Saghen/blink.compat"
     },
+    "blink.indent": {
+      "rev": "9c80820ca77218a8d28e70075d6f44a1609911fe",
+      "src": "https://github.com/Saghen/blink.indent"
+    },
     "bullets.vim": {
-      "rev": "89294b8930e660936374fb763ac48a1ac51dd29c",
+      "rev": "28c22791153a90bb61a86fbeeae0f812e048ade7",
       "src": "https://github.com/bullets-vim/bullets.vim"
     },
     "cmp-vimtex": {
@@ -53,8 +57,16 @@
       "src": "https://github.com/echasnovski/mini.pairs"
     },
     "mini.pick": {
-      "rev": "fd7e7efadddcec3f3d7f3b363a99aa44e7286c65",
+      "rev": "437d44eb57312f23e6b931704694fc294922cd88",
       "src": "https://github.com/echasnovski/mini.pick"
+    },
+    "mini.sessions": {
+      "rev": "2e419949f6846871b3b87bcd7c418b0d1f0ad68a",
+      "src": "https://github.com/echasnovski/mini.sessions"
+    },
+    "mini.starter": {
+      "rev": "7bdc9decc8b623f245c1e42a64bc41e61d574c5e",
+      "src": "https://github.com/echasnovski/mini.starter"
     },
     "mini.statusline": {
       "rev": "b456bfe845e475e9cec065b7a9a1ef657ad2f41b",
@@ -68,9 +80,17 @@
       "rev": "169af955ad2ed0ffcc3d2c83e850bcc7eaac2f0e",
       "src": "https://github.com/echasnovski/mini.tabline"
     },
+    "novellum.nvim": {
+      "rev": "1be63b8815a844fafbd2661c8773fb1e0a70133a",
+      "src": "https://github.com/leogabac/novellum.nvim"
+    },
     "nvim-lspconfig": {
-      "rev": "c588db330592fa477a70d2fee6ba20a57194bdc3",
+      "rev": "8a9378a822719346a0288fa004dab302ca3c0a8f",
       "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "nvim-notify": {
+      "rev": "8701bece920b38ea289b457f902e2ad184131a5d",
+      "src": "https://github.com/rcarriga/nvim-notify"
     },
     "nvim-tree.lua": {
       "rev": "509962f21ab7289d8dcd28568af539be39a8c01e",
@@ -82,7 +102,7 @@
       "version": "'main'"
     },
     "nvim-web-devicons": {
-      "rev": "6e76c5e47e957fbf080b1fdac165c66dbd2e7cfb",
+      "rev": "c72328a5494b4502947a022fe69c0c47e53b6aa6",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "vim-sleuth": {

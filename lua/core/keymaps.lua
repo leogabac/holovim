@@ -5,7 +5,28 @@ vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
 local opts = { noremap = true, silent = true }
 
+local function with_mini_sessions(fn)
+  return function()
+    local ok, sessions = pcall(require, "mini.sessions")
+    if not ok then
+      vim.notify("mini.sessions is not available", vim.log.levels.WARN, { title = "Sessions" })
+      return
+    end
+
+    fn(sessions)
+  end
+end
+
 vim.keymap.set("n", "<leader>sn", "<cmd>noautocmd w<CR>", { desc = "Write without autocmds", unpack(opts) })
+vim.keymap.set("n", "<leader>ss", with_mini_sessions(function(sessions)
+  sessions.write()
+end), { desc = "Session save", unpack(opts) })
+vim.keymap.set("n", "<leader>sr", with_mini_sessions(function(sessions)
+  sessions.select()
+end), { desc = "Session load", unpack(opts) })
+vim.keymap.set("n", "<leader>sd", with_mini_sessions(function(sessions)
+  sessions.delete()
+end), { desc = "Session delete", unpack(opts) })
 vim.keymap.set("n", "x", '"_x', opts)
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz", opts)
@@ -58,3 +79,12 @@ vim.keymap.set("n", "<leader>,", "A,<Esc>", { desc = "Append comma", unpack(opts
 vim.keymap.set("v", "<leader>y", '"+y', { desc = "Yank to clipboard", unpack(opts) })
 vim.keymap.set("n", "<leader>ly", '"+yy', { desc = "Yank line to clipboard", unpack(opts) })
 vim.keymap.set("n", "<leader>ya", 'ggVG"+y', { desc = "Yank all to clipboard", unpack(opts) })
+
+vim.keymap.set("n", "<leader>nf", "<cmd>NovellumFind<CR>", { desc = "Novellum find", unpack(opts) })
+vim.keymap.set("n", "<leader>ns", "<cmd>NovellumSearch<CR>", { desc = "Novellum search", unpack(opts) })
+vim.keymap.set("n", "<leader>no", "<cmd>NovellumOpenNote<CR>", { desc = "Novellum open note", unpack(opts) })
+vim.keymap.set("n", "<leader>nt", "<cmd>NovellumStitch<CR>", { desc = "Novellum stitch", unpack(opts) })
+vim.keymap.set("n", "<leader>nc", "<cmd>NovellumCompile<CR>", { desc = "Novellum compile stitched", unpack(opts) })
+vim.keymap.set("n", "<leader>np", "<cmd>NovellumOpen<CR>", { desc = "Novellum open pdf", unpack(opts) })
+vim.keymap.set("n", "<leader>nr", "<cmd>NovellumRefresh<CR>", { desc = "Novellum refresh", unpack(opts) })
+vim.keymap.set("n", "<leader>nh", "<cmd>NovellumHealth<CR>", { desc = "Novellum health", unpack(opts) })

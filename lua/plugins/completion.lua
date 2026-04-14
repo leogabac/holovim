@@ -35,6 +35,7 @@ blink.setup({
       show_on_insert_on_trigger_character = true,
     },
     window = {
+      border = "single",
       show_documentation = false,
     },
   },

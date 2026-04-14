@@ -30,6 +30,8 @@ local function clear_background()
   end
 
   vim.api.nvim_set_hl(0, "TreesitterContextSeparator", { fg = "#7AA2F7", bg = "NONE" })
+  vim.api.nvim_set_hl(0, "LineNr", { fg = "#DCA561", bg = "NONE" })
+  vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FFD75F", bg = "NONE", bold = true })
 end
 
 kanagawa.setup({
@@ -51,7 +53,8 @@ kanagawa.setup({
       NormalFloat = { bg = "NONE" },
       NormalNC = { bg = "NONE" },
       SignColumn = { bg = "NONE" },
-      LineNr = { bg = "NONE" },
+      LineNr = { fg = "#DCA561", bg = "NONE" },
+      CursorLineNr = { fg = "#FFD75F", bg = "NONE", bold = true },
       EndOfBuffer = { bg = "NONE" },
       GitGutterAdd = { bg = "NONE" },
       GitGutterChange = { bg = "NONE" },
