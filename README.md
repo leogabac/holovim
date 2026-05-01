@@ -6,10 +6,17 @@ A neovim configuration for proud, wise, wolves.
 - Neovim 0.12 or newer
 - `tmux` for tmux pane navigation
 - `python-lsp-server`
+- `gopls`
 - `ruff` for Python linting and formatting
 - `ltex-ls`
 - `latexmk`
 - `zathura`
+
+For `gopls`, install Go first and then run:
+
+```sh
+go install golang.org/x/tools/gopls@latest
+```
 
 ## Included Plugins
 
@@ -45,4 +52,3 @@ The current stitch workflow in `novellum.nvim` is:
 2. In the interactive selector, the first options are current note, last selection, pick notes, all notes, and by category.
 3. In the `mini.pick` stitch picker, `<C-b>` marks notes and `<M-CR>` stitches the marked set.
 4. If `nvim-notify` is available, rebuild notifications only stay visible while a rebuild is running or queued.
-

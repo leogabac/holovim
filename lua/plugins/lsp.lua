@@ -182,9 +182,21 @@ vim.lsp.config("ltex", {
   },
 })
 
+vim.lsp.config("gopls", {
+  capabilities = capabilities,
+  filetypes = { "go", "gomod", "gowork", "gotmpl" },
+  settings = {
+    gopls = {
+      completeUnimported = true,
+      usePlaceholders = true,
+    },
+  },
+})
+
 vim.lsp.enable({
   "lua_ls",
   "pylsp",
   "ruff",
   "ltex",
+  "gopls",
 })

@@ -33,13 +33,13 @@ vim.o.cmdheight = 1
 vim.o.breakindent = true
 vim.o.updatetime = 250
 vim.o.timeoutlen = 500
-vim.opt.colorcolumn = "120"
 vim.o.backup = false
 vim.o.writebackup = true
 vim.o.undofile = true
 vim.o.completeopt = "menuone,noselect"
 vim.o.foldenable = false
 vim.o.foldmethod = "manual"
+-- vim.o.colorcolumn = "80"
 
 vim.opt.shortmess:append("c")
 vim.opt.iskeyword:append("-")
