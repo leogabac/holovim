@@ -5,6 +5,7 @@ A neovim configuration for proud, wise, wolves.
 
 - Neovim 0.12 or newer
 - `tmux` for tmux pane navigation
+- `clang` for the C/C++ language server and formatter (`clangd` and `clang-format`)
 - `python-lsp-server`
 - `gopls`
 - `ruff` for Python linting and formatting

@@ -10,6 +10,8 @@ conform.setup({
     lsp_format = "fallback",
   },
   formatters_by_ft = {
+    c = { "clang_format" },
+    cpp = { "clang_format" },
     python = function(bufnr)
       if conform.get_formatter_info("ruff_format", bufnr).available then
         return { "ruff_format" }

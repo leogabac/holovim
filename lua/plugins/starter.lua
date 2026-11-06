@@ -11,7 +11,7 @@ local header = table.concat({
   "|_| |_|\\___/|_|\\___/ \\_/ |_|_| |_| |_|   `._,._.'",
   "",
   '"While one may lose much because of avarice,',
-  'nothing as ever accomplished by abstinence"'
+  'nothing was ever accomplished by abstinence"'
 }, "\n")
 
 local starter_items = {

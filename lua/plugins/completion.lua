@@ -40,9 +40,9 @@ blink.setup({
     },
   },
   sources = {
-    default = { "lsp", "path", "snippets", "buffer" },
+    default = { "lsp", "path", "snippets" },
     per_filetype = {
-      tex = { "lsp", "path", "snippets", "buffer", "vimtex" },
+      tex = { "lsp", "path", "snippets", "vimtex" },
     },
     providers = {
       vimtex = {

@@ -193,10 +193,15 @@ vim.lsp.config("gopls", {
   },
 })
 
+vim.lsp.config("clangd", {
+  capabilities = capabilities,
+})
+
 vim.lsp.enable({
   "lua_ls",
   "pylsp",
   "ruff",
   "ltex",
   "gopls",
+  "clangd",
 })

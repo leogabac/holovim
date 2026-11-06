@@ -11,6 +11,7 @@ local ok, err = pcall(vim.pack.add, {
   { src = "https://github.com/echasnovski/mini.pairs" },
   { src = "https://github.com/echasnovski/mini.sessions" },
   { src = "https://github.com/echasnovski/mini.surround" },
+  { src = "https://github.com/catgoose/nvim-colorizer.lua" },
   { src = "https://github.com/L3MON4D3/LuaSnip" },
   { src = "https://github.com/bullets-vim/bullets.vim" },
   { src = "https://github.com/christoomey/vim-tmux-navigator" },
@@ -39,6 +40,7 @@ require("plugins.colorscheme")
 require("plugins.ui")
 require("plugins.starter")
 require("plugins.notify")
+require("plugins.colors")
 require("plugins.editing")
 require("plugins.latex")
 require("plugins.utilities")
